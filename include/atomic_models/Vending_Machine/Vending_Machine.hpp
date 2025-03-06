@@ -16,10 +16,10 @@ using namespace cadmium;
 //enum for representing the states
 enum class Vending_Machine_States {    
    Check_Amount, 
-   _____Collect____Currency, 
    ____Dispense___Beverage, 
-   Output_Change, 
-   ____Wait_For___Selection 
+   _____Collect____Currency, 
+   ____Wait_For___Selection, 
+   Output_Change 
 
 }; //end of the enum
 
@@ -30,17 +30,17 @@ std::string enumToString(Vending_Machine_States state) {
         case Vending_Machine_States::Check_Amount:
             return "Check_Amount" ;
 
-        case Vending_Machine_States::_____Collect____Currency:
-            return "_____Collect____Currency" ;
-
         case Vending_Machine_States::____Dispense___Beverage:
             return "____Dispense___Beverage" ;
 
-        case Vending_Machine_States::Output_Change:
-            return "Output_Change" ;
+        case Vending_Machine_States::_____Collect____Currency:
+            return "_____Collect____Currency" ;
 
         case Vending_Machine_States::____Wait_For___Selection:
             return "____Wait_For___Selection" ;
+
+        case Vending_Machine_States::Output_Change:
+            return "Output_Change" ;
 
         default:
             return "invalid";
@@ -266,7 +266,7 @@ class Vending_Machine: public Atomic<Vending_Machine_State> {
                 }     
                 
                 case Vending_Machine_States::Output_Change:{
-
+                    state.change_to_output = state.total_money_inserted - state.beverage_selected.price;
                     if(true)
                     {
                         o_change->addMessage(state.change_to_output);
@@ -305,21 +305,21 @@ class Vending_Machine: public Atomic<Vending_Machine_State> {
                 // state.sigma = 0;
                 return 0;
 
-            case Vending_Machine_States::_____Collect____Currency:
-                // state.sigma = std::numeric_limits<double>::infinity();
-                return std::numeric_limits<double>::infinity();
-
             case Vending_Machine_States::____Dispense___Beverage:
                 // state.sigma = 5;
                 return 5;
 
-            case Vending_Machine_States::Output_Change:
-                // state.sigma = 10;
-                return 10;
+            case Vending_Machine_States::_____Collect____Currency:
+                // state.sigma = std::numeric_limits<double>::infinity();
+                return std::numeric_limits<double>::infinity();
 
             case Vending_Machine_States::____Wait_For___Selection:
                 // state.sigma = std::numeric_limits<double>::infinity();
                 return std::numeric_limits<double>::infinity();
+
+            case Vending_Machine_States::Output_Change:
+                // state.sigma = 10;
+                return 10;
 
             default:
                 break;

@@ -96,19 +96,19 @@
                 "notif_color": "#26f800",
                 "notif_priority": 1
             },
-            "_____Collect____Currency": {
-                "notif_color": "#26f800",
-                "notif_priority": 1
-            },
             "____Dispense___Beverage": {
                 "notif_color": "#26f800",
                 "notif_priority": 1
             },
-            "Output_Change": {
+            "_____Collect____Currency": {
                 "notif_color": "#26f800",
                 "notif_priority": 1
             },
             "____Wait_For___Selection": {
+                "notif_color": "#26f800",
+                "notif_priority": 1
+            },
+            "Output_Change": {
                 "notif_color": "#26f800",
                 "notif_priority": 1
             }
