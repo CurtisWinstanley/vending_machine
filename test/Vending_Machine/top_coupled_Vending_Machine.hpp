@@ -18,7 +18,7 @@
 #include <string>
 #include <cassert>
 
-#include "include/coupled_models/Vending_Machine/Vending_Machine.hpp"
+#include "coupled_models/Vending_Machine/Vending_Machine.hpp"
 #include "Vending_Machine_Variant_Goblin.hpp"
 
 

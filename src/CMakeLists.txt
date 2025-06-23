@@ -9,6 +9,7 @@ endif()
 
 if(UNIX)
     # CMake configurations for unix
+      target_include_directories(Example_Coupled_Model PUBLIC ${includes_list})
 endif()
 
 if(APPLE)
@@ -29,6 +30,7 @@ endif()
 
 if(UNIX)
     # CMake configurations for unix
+    target_include_directories(Vending_Machine_Activity PUBLIC ${includes_list})
 endif()
 
 if(APPLE)
@@ -51,6 +53,7 @@ endif()
 
 if(UNIX)
     # CMake configurations for unix
+     target_include_directories(Supervisor PUBLIC ${includes_list})
 endif()
 
 
