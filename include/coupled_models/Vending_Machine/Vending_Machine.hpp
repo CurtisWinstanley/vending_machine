@@ -13,8 +13,8 @@ using namespace cadmium;
 // ------ Your includes list ------- 
 
  //Includes for submodels
-#include "atomic_models/VM_Audio/VM_Audio.hpp"
 #include "atomic_models/VM_Purchase/VM_Purchase.hpp"
+#include "atomic_models/VM_Audio/VM_Audio.hpp"
 
 
 
@@ -40,8 +40,8 @@ class Vending_Machine : public Coupled {
             model_id = id;
         
  
-            auto VM_Audio_2852446593 = addComponent<VM_Audio>(model_id + "_2" );
             auto VM_Purchase_2023769544 = addComponent<VM_Purchase>(model_id + "_1" );
+            auto VM_Audio_2852446593 = addComponent<VM_Audio>(model_id + "_2" );
             //EICs
             addCoupling(i_beverage_selection, VM_Purchase_2023769544->i_beverage_selection);
             addCoupling(i_money, VM_Purchase_2023769544->i_money);

@@ -49,8 +49,8 @@ class Vending_Machine_Activity : public Coupled {
             //EOCs
             //ICs
             addCoupling(VM_Purchase_863366135->o_change, Customers_559098369->i_change_owed);
-            addCoupling(Customers_559098369->o_selected_beverage, VM_Purchase_863366135->i_beverage_selection);
             addCoupling(VM_Purchase_863366135->o_dispense_id, Customers_559098369->i_dispensed_beverage);
+            addCoupling(Customers_559098369->o_selected_beverage, VM_Purchase_863366135->i_beverage_selection);
             addCoupling(Customers_559098369->o_money, VM_Purchase_863366135->i_money);
             addCoupling(VM_Purchase_863366135->o_audio_message, VM_Audio_3341052146->i_message_to_speak);
 

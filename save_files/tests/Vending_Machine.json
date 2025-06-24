@@ -1,5 +1,5 @@
 {
-    "build_configs": "add_executable(td_Vending_Machine \"Vending_Machine/td_Vending_Machine.cpp\")\n\n\nif(WIN32)\n    # CMake configurations for windows\n    target_link_libraries(td_Vending_Machine wsock32 ws2_32)\n    target_include_directories(td_Vending_Machine PUBLIC ${includes_list})\nendif()\n\n\nif(UNIX)\n    # CMake configurations for unix\nendif()\n\n\nif(APPLE)\n    # CMake configurations for apple\n    target_link_directories(td_Vending_Machine PUBLIC /usr/local/opt/icu4c/lib)\n    target_link_libraries(td_Vending_Machine icudata)\n    target_include_directories(td_Vending_Machine PUBLIC ${includes_list})\nendif()",
+    "build_configs": "add_executable(td_Vending_Machine \"Vending_Machine/td_Vending_Machine.cpp\")\n\n\nif(WIN32)\n    # CMake configurations for windows\n    target_link_libraries(td_Vending_Machine wsock32 ws2_32)\n    target_include_directories(td_Vending_Machine PUBLIC ${includes_list})\nendif()\n\n\nif(UNIX)\n    # CMake configurations for unix\n    target_include_directories(td_Vending_Machine PUBLIC ${includes_list})\nendif()\n\n\nif(APPLE)\n    # CMake configurations for apple\n    target_link_directories(td_Vending_Machine PUBLIC /usr/local/opt/icu4c/lib)\n    target_link_libraries(td_Vending_Machine icudata)\n    target_include_directories(td_Vending_Machine PUBLIC ${includes_list})\nendif()",
     "test data": {
         "Standard_Purchase": {
             "set_constructor_args": [],
@@ -18,6 +18,34 @@
                         [
                             "10",
                             "5"
+                        ]
+                    ],
+                    "port_type": "float"
+                }
+            },
+            "Outputs_Table": {}
+        },
+        "2_Point_Purchase": {
+            "set_constructor_args": [],
+            "Inputs_Table": {
+                "i_beverage_selection": {
+                    "data": [
+                        [
+                            "1",
+                            "{20, 5.00}"
+                        ]
+                    ],
+                    "port_type": "item_selection_t"
+                },
+                "i_money": {
+                    "data": [
+                        [
+                            "5",
+                            "2.50"
+                        ],
+                        [
+                            "10",
+                            "2.50"
                         ]
                     ],
                     "port_type": "float"

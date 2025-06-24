@@ -5,20 +5,20 @@
         "My_Coupled_Model": {},
         "Top_Level_Coupled_Model": {},
         "Example_Coupled_Model": {
-            "1945197320": [
-                "Example_Coupled_Model2",
-                "coupled",
-                3
+            "4047377077": [
+                "Example_Atomic_Model",
+                "atomic",
+                1
             ],
             "370608149": [
                 "Example_Atomic_Model2",
                 "atomic",
                 2
             ],
-            "4047377077": [
-                "Example_Atomic_Model",
-                "atomic",
-                1
+            "1945197320": [
+                "Example_Coupled_Model2",
+                "coupled",
+                3
             ]
         },
         "Example_Coupled_Model2": {
@@ -58,15 +58,15 @@
                 "coupled",
                 1
             ],
-            "3657918440": [
-                "Waypoint_Follow",
-                "atomic",
-                2
-            ],
             "779531715": [
                 "Takeoff",
                 "atomic",
                 3
+            ],
+            "3657918440": [
+                "Waypoint_Follow",
+                "atomic",
+                2
             ],
             "3654129461": [
                 "Landing",
@@ -75,15 +75,15 @@
             ]
         },
         "Vending_Machine": {
-            "2852446593": [
-                "VM_Audio",
-                "atomic",
-                2
-            ],
             "2023769544": [
                 "VM_Purchase",
                 "atomic",
                 1
+            ],
+            "2852446593": [
+                "VM_Audio",
+                "atomic",
+                2
             ]
         }
     },
@@ -155,14 +155,6 @@
             }
         },
         "VM_Purchase": {
-            "____Wait_For___Selection": {
-                "notif_color": "#26f800",
-                "notif_priority": 1
-            },
-            "____Dispense___Beverage": {
-                "notif_color": "#26f800",
-                "notif_priority": 1
-            },
             "Check_Amount": {
                 "notif_color": "#26f800",
                 "notif_priority": 1
@@ -171,11 +163,19 @@
                 "notif_color": "#26f800",
                 "notif_priority": 1
             },
-            "Blocking_State": {
+            "_____Collect____Currency": {
                 "notif_color": "#26f800",
                 "notif_priority": 1
             },
-            "_____Collect____Currency": {
+            "Blocking_State": {
+                "notif_color": "#ff0000",
+                "notif_priority": 1
+            },
+            "____Dispense___Beverage": {
+                "notif_color": "#26f800",
+                "notif_priority": 1
+            },
+            "____Wait_For___Selection": {
                 "notif_color": "#26f800",
                 "notif_priority": 1
             }

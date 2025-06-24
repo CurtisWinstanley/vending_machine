@@ -3,27 +3,13 @@
         "model_description": ""
     },
     {},
-    {},
-    {},
-    {
-        "obj_type": "External_Output_Coupling",
-        "couplings": [
-            "CoupledOutput"
-        ],
-        "x_pos": 3936.49,
-        "y_pos": 3790.352499999999,
-        "parent_model_name": "Example_Atomic_Model2",
-        "parent_id": 370608149,
-        "coupled_port_name": "Output2"
-    },
-    {},
     {
         "obj_type": "Internal_Coupling",
         "segments": [
             {
-                "p1_x": 3948.99,
+                "p1_x": 3937.615,
                 "p1_y": 3730.352499999999,
-                "p2_x": 4107.592499999999,
+                "p2_x": 4110.273749999999,
                 "p2_y": 3732.232499999999,
                 "this_seg_id": 1516003746,
                 "line_seg_attatched_to_head_id": null,
@@ -41,28 +27,30 @@
         "coupled_out_port_id": 1,
         "coupled_in_port_id": 0
     },
+    {},
     {
-        "obj_type": "Editable_Model_Title",
-        "title": "Example_Coupled_Model"
+        "obj_type": "External_Input_Coupling",
+        "couplings": [
+            "CoupledInput1"
+        ],
+        "x_pos": 3142.3712499999997,
+        "y_pos": 3710.352499999999,
+        "parent_model_name": "Example_Atomic_Model2",
+        "parent_id": 370608149,
+        "coupled_port_name": "Input1"
     },
+    {},
+    {},
     {
-        "obj_type": "DEVS_Model_Graphics_Item",
-        "model_name": "Example_Coupled_Model2",
-        "model_type": "coupled",
-        "x_pos": 3444.7818749999988,
-        "y_pos": 3910.1696249999986,
-        "id": 1945197320,
-        "set_constructor_args": []
+        "obj_type": "Constructor_Code_Box",
+        "code_box_contents": "",
+        "is_visible": false
     },
-    {
-        "obj_type": "DEVS_Model_Graphics_Item",
-        "model_name": "Example_Atomic_Model2",
-        "model_type": "atomic",
-        "x_pos": 3447.49,
-        "y_pos": 3700.352499999999,
-        "id": 370608149,
-        "set_constructor_args": []
-    },
+    {},
+    {},
+    {},
+    {},
+    {},
     {},
     {},
     {},
@@ -82,13 +70,45 @@
     {},
     {},
     {},
+    {
+        "obj_type": "External_Input_Coupling",
+        "couplings": [
+            "CoupledInput1"
+        ],
+        "x_pos": 3139.6631249999987,
+        "y_pos": 3920.1696249999986,
+        "parent_model_name": "Example_Coupled_Model2",
+        "parent_id": 1945197320,
+        "coupled_port_name": "Input1"
+    },
+    {},
+    {
+        "obj_type": "Include_Dirs_Box",
+        "include_dirs_box": "",
+        "is_visible": false
+    },
+    {},
     {},
     {},
     {
-        "obj_type": "Constructor_Code_Box",
-        "code_box_contents": "",
+        "obj_type": "Constructor_Args_Table",
+        "Constructor_Args": [],
         "is_visible": false
     },
+    {
+        "obj_type": "External_Output_Coupling",
+        "couplings": [
+            "CoupledOutput"
+        ],
+        "x_pos": 3925.115,
+        "y_pos": 3790.352499999999,
+        "parent_model_name": "Example_Atomic_Model2",
+        "parent_id": 370608149,
+        "coupled_port_name": "Output2"
+    },
+    {},
+    {},
+    {},
     {
         "obj_type": "Input_Port_Table",
         "Input_Ports": [
@@ -98,6 +118,32 @@
             }
         ],
         "is_visible": false
+    },
+    {},
+    {},
+    {
+        "obj_type": "DEVS_Model_Graphics_Item",
+        "model_name": "Example_Atomic_Model2",
+        "model_type": "atomic",
+        "x_pos": 3447.49,
+        "y_pos": 3700.352499999999,
+        "id": 370608149,
+        "set_constructor_args": []
+    },
+    {},
+    {
+        "obj_type": "DEVS_Model_Graphics_Item",
+        "model_name": "Example_Coupled_Model2",
+        "model_type": "coupled",
+        "x_pos": 3444.7818749999988,
+        "y_pos": 3910.1696249999986,
+        "id": 1945197320,
+        "set_constructor_args": []
+    },
+    {},
+    {
+        "obj_type": "Editable_Model_Title",
+        "title": "Example_Coupled_Model"
     },
     {},
     {
@@ -110,52 +156,6 @@
         ],
         "is_visible": false
     },
-    {},
-    {},
-    {
-        "obj_type": "External_Input_Coupling",
-        "couplings": [
-            "CoupledInput1"
-        ],
-        "x_pos": 3136.9818749999986,
-        "y_pos": 3920.1696249999986,
-        "parent_model_name": "Example_Coupled_Model2",
-        "parent_id": 1945197320,
-        "coupled_port_name": "Input1"
-    },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {
-        "obj_type": "Constructor_Args_Table",
-        "Constructor_Args": [],
-        "is_visible": false
-    },
-    {
-        "obj_type": "Include_Dirs_Box",
-        "include_dirs_box": "",
-        "is_visible": false
-    },
-    {
-        "obj_type": "External_Input_Coupling",
-        "couplings": [
-            "CoupledInput1"
-        ],
-        "x_pos": 3139.6899999999996,
-        "y_pos": 3710.352499999999,
-        "parent_model_name": "Example_Atomic_Model2",
-        "parent_id": 370608149,
-        "coupled_port_name": "Input1"
-    },
-    {},
-    {},
-    {},
-    {},
-    {},
     {},
     {},
     {},

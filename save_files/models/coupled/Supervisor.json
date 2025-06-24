@@ -2,28 +2,14 @@
     {
         "model_description": ""
     },
-    {
-        "obj_type": "Constructor_Args_Table",
-        "Constructor_Args": [],
-        "is_visible": false
-    },
-    {
-        "obj_type": "Constructor_Code_Box",
-        "code_box_contents": "",
-        "is_visible": false
-    },
     {},
     {},
     {
-        "obj_type": "Output_Port_Table",
-        "Output_Ports": [
-            {
-                "Name": "complete",
-                "Type": "int"
-            }
-        ],
-        "is_visible": false
+        "obj_type": "Editable_Model_Title",
+        "title": "Supervisor"
     },
+    {},
+    {},
     {},
     {
         "obj_type": "DEVS_Model_Graphics_Item",
@@ -32,27 +18,6 @@
         "x_pos": 3504.3575,
         "y_pos": 3803.2975,
         "id": 927918088,
-        "set_constructor_args": []
-    },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {
-        "obj_type": "DEVS_Model_Graphics_Item",
-        "model_name": "Waypoint_Follow",
-        "model_type": "atomic",
-        "x_pos": 4103.717499999999,
-        "y_pos": 3618.3599999999997,
-        "id": 3657918440,
         "set_constructor_args": []
     },
     {},
@@ -65,20 +30,33 @@
         "id": 779531715,
         "set_constructor_args": []
     },
-    {},
-    {},
+    {
+        "obj_type": "DEVS_Model_Graphics_Item",
+        "model_name": "Waypoint_Follow",
+        "model_type": "atomic",
+        "x_pos": 4103.717499999999,
+        "y_pos": 3618.3599999999997,
+        "id": 3657918440,
+        "set_constructor_args": []
+    },
     {},
     {},
     {},
     {
-        "obj_type": "DEVS_Model_Graphics_Item",
-        "model_name": "Landing",
-        "model_type": "atomic",
-        "x_pos": 4105.040000000001,
-        "y_pos": 4016.432499999999,
-        "id": 3654129461,
-        "set_constructor_args": []
+        "obj_type": "Constructor_Args_Table",
+        "Constructor_Args": [],
+        "is_visible": false
     },
+    {},
+    {},
+    {
+        "obj_type": "Constructor_Code_Box",
+        "code_box_contents": "",
+        "is_visible": false
+    },
+    {},
+    {},
+    {},
     {},
     {},
     {},
@@ -98,7 +76,7 @@
                 "line_seg_attatched_to_tail_id": 2095568775
             },
             {
-                "p1_x": 3953.8575,
+                "p1_x": 3944.1075,
                 "p1_y": 3833.2975,
                 "p2_x": 3898.7299999999996,
                 "p2_y": 3697.7099999999996,
@@ -109,7 +87,7 @@
             {
                 "p1_x": 3900.0524999999993,
                 "p1_y": 3648.7774999999992,
-                "p2_x": 3986.4174999999987,
+                "p2_x": 3989.992499999999,
                 "p2_y": 3648.3599999999997,
                 "this_seg_id": 1335444992,
                 "line_seg_attatched_to_head_id": null,
@@ -127,17 +105,54 @@
         "coupled_out_port_id": 0,
         "coupled_in_port_id": 0
     },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
     {
         "obj_type": "External_Input_Coupling",
         "couplings": [
             "abort"
         ],
-        "x_pos": 3987.385000000001,
+        "x_pos": 3993.194375000001,
         "y_pos": 3909.379999999999,
         "parent_model_name": "Takeoff",
         "parent_id": 779531715,
         "coupled_port_name": "abort_takeoff"
     },
+    {},
+    {},
+    {
+        "obj_type": "Output_Port_Table",
+        "Output_Ports": [
+            {
+                "Name": "complete",
+                "Type": "int"
+            }
+        ],
+        "is_visible": false
+    },
+    {},
+    {
+        "obj_type": "Include_Dirs_Box",
+        "include_dirs_box": "",
+        "is_visible": false
+    },
+    {},
+    {
+        "obj_type": "Input_Port_Table",
+        "Input_Ports": [
+            {
+                "Name": "abort",
+                "Type": "int"
+            }
+        ],
+        "is_visible": false
+    },
+    {},
     {},
     {
         "obj_type": "Internal_Coupling",
@@ -145,14 +160,14 @@
             {
                 "p1_x": 4098.4275,
                 "p1_y": 3835.2499999999995,
-                "p2_x": 4199.885000000001,
+                "p2_x": 4205.694375000001,
                 "p2_y": 3849.379999999999,
                 "this_seg_id": 3053054196,
                 "line_seg_attatched_to_head_id": null,
                 "line_seg_attatched_to_tail_id": 4269119520
             },
             {
-                "p1_x": 3953.8575,
+                "p1_x": 3944.1075,
                 "p1_y": 3833.2975,
                 "p2_x": 4098.4275,
                 "p2_y": 3835.2499999999995,
@@ -172,12 +187,6 @@
         "coupled_out_port_id": 0,
         "coupled_in_port_id": 0
     },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
     {},
     {
         "obj_type": "Internal_Coupling",
@@ -201,7 +210,7 @@
                 "line_seg_attatched_to_tail_id": 27774492
             },
             {
-                "p1_x": 3953.8575,
+                "p1_x": 3944.1075,
                 "p1_y": 3833.2975,
                 "p2_x": 3999.2399999999993,
                 "p2_y": 3832.6049999999996,
@@ -212,7 +221,7 @@
             {
                 "p1_x": 3900.0524999999993,
                 "p1_y": 4046.8499999999995,
-                "p2_x": 3932.7400000000007,
+                "p2_x": 3938.549375000001,
                 "p2_y": 4046.432499999999,
                 "this_seg_id": 2050987236,
                 "line_seg_attatched_to_head_id": null,
@@ -231,56 +240,44 @@
         "coupled_in_port_id": 0
     },
     {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
     {
         "obj_type": "External_Input_Coupling",
         "couplings": [
             "abort"
         ],
-        "x_pos": 3720.2400000000007,
+        "x_pos": 3726.049375000001,
         "y_pos": 4106.432499999999,
         "parent_model_name": "Landing",
         "parent_id": 3654129461,
         "coupled_port_name": "abort_landing"
     },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
     {
         "obj_type": "External_Output_Coupling",
         "couplings": [
             "complete"
         ],
-        "x_pos": 4502.040000000001,
+        "x_pos": 4492.696250000001,
         "y_pos": 4026.432499999999,
         "parent_model_name": "Landing",
         "parent_id": 3654129461,
         "coupled_port_name": "landing_complete"
     },
     {},
-    {
-        "obj_type": "Editable_Model_Title",
-        "title": "Supervisor"
-    },
     {},
     {
-        "obj_type": "Input_Port_Table",
-        "Input_Ports": [
-            {
-                "Name": "abort",
-                "Type": "int"
-            }
-        ],
-        "is_visible": false
-    },
-    {
-        "obj_type": "Include_Dirs_Box",
-        "include_dirs_box": "",
-        "is_visible": false
+        "obj_type": "DEVS_Model_Graphics_Item",
+        "model_name": "Landing",
+        "model_type": "atomic",
+        "x_pos": 4105.040000000001,
+        "y_pos": 4016.432499999999,
+        "id": 3654129461,
+        "set_constructor_args": []
     },
     {},
     {},

@@ -3,72 +3,16 @@
         "model_description": ""
     },
     {
-        "obj_type": "DEVS_Model_Graphics_Item",
-        "model_name": "VM_Purchase",
-        "model_type": "atomic",
-        "x_pos": 3918.1238012499975,
-        "y_pos": 3749.1697974999975,
-        "id": 863366135,
-        "set_constructor_args": []
-    },
-    {},
-    {},
-    {},
-    {
-        "obj_type": "DEVS_Model_Graphics_Item",
-        "model_name": "Customers",
-        "model_type": "atomic",
-        "x_pos": 3974.7,
-        "y_pos": 3371.6000000000004,
-        "id": 559098369,
-        "set_constructor_args": []
-    },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {
-        "obj_type": "DEVS_Model_Graphics_Item",
-        "model_name": "VM_Audio",
-        "model_type": "atomic",
-        "x_pos": 4822.082968750004,
-        "y_pos": 3969.2027187499993,
-        "id": 3341052146,
-        "set_constructor_args": []
-    },
-    {},
-    {},
-    {},
-    {},
-    {
-        "obj_type": "Editable_Model_Title",
-        "title": "Vending_Machine_Activity"
-    },
-    {
-        "obj_type": "Output_Port_Table",
-        "Output_Ports": [
-            {
-                "Name": "o_logged_dispense_id",
-                "Type": "int"
-            }
-        ],
-        "is_visible": false
-    },
-    {
-        "obj_type": "Input_Port_Table",
-        "Input_Ports": [
-            {
-                "Name": "i_start_customer_activity",
-                "Type": "bool"
-            }
-        ],
+        "obj_type": "Include_Dirs_Box",
+        "include_dirs_box": "",
         "is_visible": false
     },
     {},
-    {},
+    {
+        "obj_type": "Constructor_Code_Box",
+        "code_box_contents": "",
+        "is_visible": false
+    },
     {
         "obj_type": "Constructor_Args_Table",
         "Constructor_Args": [],
@@ -76,11 +20,11 @@
     },
     {},
     {},
-    {
-        "obj_type": "Constructor_Code_Box",
-        "code_box_contents": "",
-        "is_visible": false
-    },
+    {},
+    {},
+    {},
+    {},
+    {},
     {},
     {},
     {},
@@ -152,6 +96,82 @@
         "coupled_in_port_name": "i_change_owed",
         "coupled_out_port_id": 2,
         "coupled_in_port_id": 1
+    },
+    {},
+    {},
+    {
+        "obj_type": "Internal_Coupling",
+        "segments": [
+            {
+                "p1_x": 4437.228856249998,
+                "p1_y": 4022.714374999998,
+                "p2_x": 3517.2515687499986,
+                "p2_y": 4015.7183499999983,
+                "this_seg_id": 4152827723,
+                "line_seg_attatched_to_head_id": 3982733308,
+                "line_seg_attatched_to_tail_id": 3132741776
+            },
+            {
+                "p1_x": 4438.977862499998,
+                "p1_y": 3860.056793749998,
+                "p2_x": 4437.228856249998,
+                "p2_y": 4022.714374999998,
+                "this_seg_id": 3132741776,
+                "line_seg_attatched_to_head_id": 4152827723,
+                "line_seg_attatched_to_tail_id": 1538301772
+            },
+            {
+                "p1_x": 4359.061301249998,
+                "p1_y": 3859.1697974999975,
+                "p2_x": 4438.977862499998,
+                "p2_y": 3860.056793749998,
+                "this_seg_id": 1538301772,
+                "line_seg_attatched_to_head_id": 3132741776,
+                "line_seg_attatched_to_tail_id": null
+            },
+            {
+                "p1_x": 3517.2515687499986,
+                "p1_y": 4015.7183499999983,
+                "p2_x": 3520.7495812499983,
+                "p2_y": 3562.7257312499983,
+                "this_seg_id": 3982733308,
+                "line_seg_attatched_to_head_id": 2136301515,
+                "line_seg_attatched_to_tail_id": 4152827723
+            },
+            {
+                "p1_x": 3520.7495812499983,
+                "p1_y": 3562.7257312499983,
+                "p2_x": 3681.5718749999996,
+                "p2_y": 3561.6000000000004,
+                "this_seg_id": 2136301515,
+                "line_seg_attatched_to_head_id": null,
+                "line_seg_attatched_to_tail_id": 3982733308
+            }
+        ],
+        "x_pos": 0.0,
+        "y_pos": 0.0,
+        "coupled_out_port_parent_name": "VM_Purchase",
+        "coupled_out_port_parent_id": 863366135,
+        "coupled_out_port_name": "o_dispense_id",
+        "coupled_in_port_parent_name": "Customers",
+        "coupled_in_port_parent_id": 559098369,
+        "coupled_in_port_name": "i_dispensed_beverage",
+        "coupled_out_port_id": 3,
+        "coupled_in_port_id": 2
+    },
+    {},
+    {},
+    {},
+    {
+        "obj_type": "External_Input_Coupling",
+        "couplings": [
+            "i_start_customer_activity"
+        ],
+        "x_pos": 3469.0718749999996,
+        "y_pos": 3381.6000000000004,
+        "parent_model_name": "Customers",
+        "parent_id": 559098369,
+        "coupled_port_name": "i_start_customer_activity"
     },
     {},
     {},
@@ -230,77 +250,58 @@
     {},
     {},
     {},
+    {
+        "obj_type": "Editable_Model_Title",
+        "title": "Vending_Machine_Activity"
+    },
+    {
+        "obj_type": "DEVS_Model_Graphics_Item",
+        "model_name": "VM_Purchase",
+        "model_type": "atomic",
+        "x_pos": 3918.1238012499975,
+        "y_pos": 3749.1697974999975,
+        "id": 863366135,
+        "set_constructor_args": []
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
     {},
     {
-        "obj_type": "Internal_Coupling",
-        "segments": [
+        "obj_type": "DEVS_Model_Graphics_Item",
+        "model_name": "Customers",
+        "model_type": "atomic",
+        "x_pos": 3974.7,
+        "y_pos": 3371.6000000000004,
+        "id": 559098369,
+        "set_constructor_args": []
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+        "obj_type": "Input_Port_Table",
+        "Input_Ports": [
             {
-                "p1_x": 4437.228856249998,
-                "p1_y": 4022.714374999998,
-                "p2_x": 3517.2515687499986,
-                "p2_y": 4015.7183499999983,
-                "this_seg_id": 4152827723,
-                "line_seg_attatched_to_head_id": 3982733308,
-                "line_seg_attatched_to_tail_id": 3132741776
-            },
-            {
-                "p1_x": 4438.977862499998,
-                "p1_y": 3860.056793749998,
-                "p2_x": 4437.228856249998,
-                "p2_y": 4022.714374999998,
-                "this_seg_id": 3132741776,
-                "line_seg_attatched_to_head_id": 4152827723,
-                "line_seg_attatched_to_tail_id": 1538301772
-            },
-            {
-                "p1_x": 4359.061301249998,
-                "p1_y": 3859.1697974999975,
-                "p2_x": 4438.977862499998,
-                "p2_y": 3860.056793749998,
-                "this_seg_id": 1538301772,
-                "line_seg_attatched_to_head_id": 3132741776,
-                "line_seg_attatched_to_tail_id": null
-            },
-            {
-                "p1_x": 3517.2515687499986,
-                "p1_y": 4015.7183499999983,
-                "p2_x": 3520.7495812499983,
-                "p2_y": 3562.7257312499983,
-                "this_seg_id": 3982733308,
-                "line_seg_attatched_to_head_id": 2136301515,
-                "line_seg_attatched_to_tail_id": 4152827723
-            },
-            {
-                "p1_x": 3520.7495812499983,
-                "p1_y": 3562.7257312499983,
-                "p2_x": 3681.5718749999996,
-                "p2_y": 3561.6000000000004,
-                "this_seg_id": 2136301515,
-                "line_seg_attatched_to_head_id": null,
-                "line_seg_attatched_to_tail_id": 3982733308
+                "Name": "i_start_customer_activity",
+                "Type": "bool"
             }
         ],
-        "x_pos": 0.0,
-        "y_pos": 0.0,
-        "coupled_out_port_parent_name": "VM_Purchase",
-        "coupled_out_port_parent_id": 863366135,
-        "coupled_out_port_name": "o_dispense_id",
-        "coupled_in_port_parent_name": "Customers",
-        "coupled_in_port_parent_id": 559098369,
-        "coupled_in_port_name": "i_dispensed_beverage",
-        "coupled_out_port_id": 3,
-        "coupled_in_port_id": 2
+        "is_visible": false
     },
     {
-        "obj_type": "External_Input_Coupling",
-        "couplings": [
-            "i_start_customer_activity"
+        "obj_type": "Output_Port_Table",
+        "Output_Ports": [
+            {
+                "Name": "o_logged_dispense_id",
+                "Type": "int"
+            }
         ],
-        "x_pos": 3469.0718749999996,
-        "y_pos": 3381.6000000000004,
-        "parent_model_name": "Customers",
-        "parent_id": 559098369,
-        "coupled_port_name": "i_start_customer_activity"
+        "is_visible": false
     },
     {},
     {},
@@ -308,12 +309,15 @@
     {},
     {},
     {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
+    {
+        "obj_type": "DEVS_Model_Graphics_Item",
+        "model_name": "VM_Audio",
+        "model_type": "atomic",
+        "x_pos": 4822.082968750004,
+        "y_pos": 3969.2027187499993,
+        "id": 3341052146,
+        "set_constructor_args": []
+    },
     {},
     {},
     {},
@@ -387,11 +391,7 @@
         "coupled_out_port_id": 4,
         "coupled_in_port_id": 1
     },
-    {
-        "obj_type": "Include_Dirs_Box",
-        "include_dirs_box": "",
-        "is_visible": false
-    },
+    {},
     {},
     {},
     {},

@@ -11,6 +11,7 @@ endif()
 
 if(UNIX)
     # CMake configurations for unix
+    target_include_directories(td_Vending_Machine PUBLIC ${includes_list})
 endif()
 
 

@@ -1,5 +1,5 @@
 {
-    "build_configs": "add_executable(Supervisor \"Supervisor/Supervisor.cpp\")\n\n\nif(WIN32)\n    # CMake configurations for windows\n    target_link_libraries(Supervisor wsock32 ws2_32)\n    target_include_directories(Supervisor PUBLIC ${includes_list})\nendif()\n\n\nif(UNIX)\n    # CMake configurations for unix\nendif()\n\n\nif(APPLE)\n    # CMake configurations for apple\n    target_link_directories(Supervisor PUBLIC /usr/local/opt/icu4c/lib)\n    target_link_libraries(Supervisor icudata)\n    target_include_directories(Supervisor PUBLIC ${includes_list})\nendif()",
+    "build_configs": "add_executable(Supervisor \"Supervisor/Supervisor.cpp\")\n\n\nif(WIN32)\n    # CMake configurations for windows\n    target_link_libraries(Supervisor wsock32 ws2_32)\n    target_include_directories(Supervisor PUBLIC ${includes_list})\nendif()\n\n\nif(UNIX)\n    # CMake configurations for unix\n    target_include_directories(Supervisor PUBLIC ${includes_list})\nendif()\n\n\nif(APPLE)\n    # CMake configurations for apple\n    target_link_directories(Supervisor PUBLIC /usr/local/opt/icu4c/lib)\n    target_link_libraries(Supervisor icudata)\n    target_include_directories(Supervisor PUBLIC ${includes_list})\nendif()",
     "Async_Input_Class_Arg_Table": [],
     "Async_Constructor_Code": "",
     "ISR_Blocks": [

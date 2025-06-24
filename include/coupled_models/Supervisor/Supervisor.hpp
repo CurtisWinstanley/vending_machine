@@ -14,8 +14,8 @@ using namespace cadmium;
 
  //Includes for submodels
 #include "coupled_models/External_Messages/External_Messages.hpp"
-#include "atomic_models/Waypoint_Follow/Waypoint_Follow.hpp"
 #include "atomic_models/Takeoff/Takeoff.hpp"
+#include "atomic_models/Waypoint_Follow/Waypoint_Follow.hpp"
 #include "atomic_models/Landing/Landing.hpp"
 
 
@@ -43,8 +43,8 @@ class Supervisor : public Coupled {
         
  
             auto External_Messages_927918088 = addComponent<External_Messages>(model_id + "_1" );
-            auto Waypoint_Follow_3657918440 = addComponent<Waypoint_Follow>(model_id + "_2" );
             auto Takeoff_779531715 = addComponent<Takeoff>(model_id + "_3" );
+            auto Waypoint_Follow_3657918440 = addComponent<Waypoint_Follow>(model_id + "_2" );
             auto Landing_3654129461 = addComponent<Landing>(model_id + "_4" );
             //EICs
             addCoupling(abort, Takeoff_779531715->abort_takeoff);

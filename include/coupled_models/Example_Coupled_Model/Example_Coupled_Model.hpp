@@ -13,9 +13,9 @@ using namespace cadmium;
 // ------ Your includes list ------- 
 
  //Includes for submodels
-#include "coupled_models/Example_Coupled_Model2/Example_Coupled_Model2.hpp"
-#include "atomic_models/Example_Atomic_Model2/Example_Atomic_Model2.hpp"
 #include "atomic_models/Example_Atomic_Model/Example_Atomic_Model.hpp"
+#include "atomic_models/Example_Atomic_Model2/Example_Atomic_Model2.hpp"
+#include "coupled_models/Example_Coupled_Model2/Example_Coupled_Model2.hpp"
 
 
 
@@ -41,12 +41,12 @@ class Example_Coupled_Model : public Coupled {
             model_id = id;
         
  
-            auto Example_Coupled_Model2_1945197320 = addComponent<Example_Coupled_Model2>(model_id + "_3" );
-            auto Example_Atomic_Model2_370608149 = addComponent<Example_Atomic_Model2>(model_id + "_2" );
             auto Example_Atomic_Model_4047377077 = addComponent<Example_Atomic_Model>(model_id + "_1" );
+            auto Example_Atomic_Model2_370608149 = addComponent<Example_Atomic_Model2>(model_id + "_2" );
+            auto Example_Coupled_Model2_1945197320 = addComponent<Example_Coupled_Model2>(model_id + "_3" );
             //EICs
-            addCoupling(CoupledInput1, Example_Coupled_Model2_1945197320->Input1);
             addCoupling(CoupledInput1, Example_Atomic_Model2_370608149->Input1);
+            addCoupling(CoupledInput1, Example_Coupled_Model2_1945197320->Input1);
             //EOCs
             addCoupling(Example_Atomic_Model2_370608149->Output2, CoupledOutput);
             //ICs

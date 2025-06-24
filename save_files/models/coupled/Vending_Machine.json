@@ -2,32 +2,10 @@
     {
         "model_description": ""
     },
-    {
-        "obj_type": "Editable_Model_Title",
-        "title": "Vending_Machine"
-    },
-    {},
-    {},
-    {
-        "obj_type": "Constructor_Args_Table",
-        "Constructor_Args": [],
-        "is_visible": false
-    },
     {},
     {},
     {},
     {},
-    {},
-    {},
-    {
-        "obj_type": "DEVS_Model_Graphics_Item",
-        "model_name": "VM_Audio",
-        "model_type": "atomic",
-        "x_pos": 4699.7,
-        "y_pos": 3897.2499999999995,
-        "id": 2852446593,
-        "set_constructor_args": []
-    },
     {
         "obj_type": "DEVS_Model_Graphics_Item",
         "model_name": "VM_Purchase",
@@ -37,6 +15,70 @@
         "id": 2023769544,
         "set_constructor_args": []
     },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+        "obj_type": "Input_Port_Table",
+        "Input_Ports": [
+            {
+                "Name": "i_beverage_selection",
+                "Type": "item_selection_t"
+            },
+            {
+                "Name": "i_money",
+                "Type": "float"
+            }
+        ],
+        "is_visible": false
+    },
+    {
+        "obj_type": "DEVS_Model_Graphics_Item",
+        "model_name": "VM_Audio",
+        "model_type": "atomic",
+        "x_pos": 4699.7,
+        "y_pos": 3897.2499999999995,
+        "id": 2852446593,
+        "set_constructor_args": []
+    },
+    {},
+    {},
+    {
+        "obj_type": "Output_Port_Table",
+        "Output_Ports": [],
+        "is_visible": false
+    },
+    {
+        "obj_type": "Constructor_Code_Box",
+        "code_box_contents": "",
+        "is_visible": false
+    },
+    {},
+    {
+        "obj_type": "Constructor_Args_Table",
+        "Constructor_Args": [],
+        "is_visible": false
+    },
+    {
+        "obj_type": "Editable_Model_Title",
+        "title": "Vending_Machine"
+    },
+    {},
+    {},
+    {
+        "obj_type": "Include_Dirs_Box",
+        "include_dirs_box": "",
+        "is_visible": false
+    },
+    {},
+    {},
+    {},
+    {},
     {},
     {},
     {},
@@ -54,12 +96,6 @@
     {},
     {},
     {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
     {
         "obj_type": "External_Input_Coupling",
         "couplings": [
@@ -70,42 +106,6 @@
         "parent_model_name": "VM_Purchase",
         "parent_id": 2023769544,
         "coupled_port_name": "i_money"
-    },
-    {},
-    {},
-    {
-        "obj_type": "Constructor_Code_Box",
-        "code_box_contents": "",
-        "is_visible": false
-    },
-    {},
-    {},
-    {
-        "obj_type": "Include_Dirs_Box",
-        "include_dirs_box": "",
-        "is_visible": false
-    },
-    {},
-    {
-        "obj_type": "Input_Port_Table",
-        "Input_Ports": [
-            {
-                "Name": "i_beverage_selection",
-                "Type": "item_selection_t"
-            },
-            {
-                "Name": "i_money",
-                "Type": "float"
-            }
-        ],
-        "is_visible": false
-    },
-    {},
-    {},
-    {
-        "obj_type": "Output_Port_Table",
-        "Output_Ports": [],
-        "is_visible": false
     },
     {},
     {},

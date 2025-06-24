@@ -3,210 +3,6 @@
         "model_description": ""
     },
     {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {
-        "obj_type": "State_Bubble",
-        "state_name": "____Wait_For___Selection",
-        "id": 828155347,
-        "ta": "inf",
-        "is_initial_state": true,
-        "x_pos": 3541.0,
-        "y_pos": 3837.0,
-        "receive_conditionS": [
-            {
-                "receive_condition": {
-                    "input Port": "i_beverage_selection",
-                    "store": "beverage_selected"
-                }
-            }
-        ],
-        "port_flagS": [
-            {
-                "receive_condition": {
-                    "input Port": "___r_i_beverage_selection",
-                    "store": "received_beverage_selection"
-                }
-            }
-        ],
-        "receive_conditionS_is_visible": false,
-        "receive_conditionS_size": [
-            612,
-            200
-        ],
-        "external_transition_code_box": "",
-        "external_transition_code_box_is_visible": false,
-        "external_transition_code_box_size": [
-            550,
-            150
-        ],
-        "internal_transition_code_box": "",
-        "internal_transition_code_box_is_visible": false,
-        "internal_transition_code_box_size": [
-            550,
-            150
-        ],
-        "output_function_code_box": "",
-        "output_function_code_box_is_visible": false,
-        "output_function_code_box_size": [
-            550,
-            150
-        ],
-        "notification_color": "#26f800",
-        "notification_priority": 1,
-        "state_defs": [],
-        "state_defs_is_visible": false,
-        "state_defs_size": [
-            240,
-            100
-        ]
-    },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {
-        "obj_type": "State_Bubble",
-        "state_name": "____Dispense___Beverage",
-        "id": 4031842674,
-        "ta": "5",
-        "is_initial_state": false,
-        "x_pos": 3940.0,
-        "y_pos": 4241.0,
-        "receive_conditionS": [],
-        "port_flagS": [],
-        "receive_conditionS_is_visible": false,
-        "receive_conditionS_size": [
-            625,
-            200
-        ],
-        "external_transition_code_box": "",
-        "external_transition_code_box_is_visible": false,
-        "external_transition_code_box_size": [
-            550,
-            150
-        ],
-        "internal_transition_code_box": "//Reset state variables\nstate.change_to_output = 0;\nstate.total_money_inserted = 0;\nstate.received_beverage_selection = false;",
-        "internal_transition_code_box_is_visible": false,
-        "internal_transition_code_box_size": [
-            550,
-            150
-        ],
-        "output_function_code_box": "//Set the ID to output\nstate.id_to_output = state.beverage_selected.item_id;\nstate.audio_message = \"thanks for your money\";",
-        "output_function_code_box_is_visible": true,
-        "output_function_code_box_size": [
-            646,
-            100
-        ],
-        "notification_color": "#26f800",
-        "notification_priority": 1,
-        "state_defs": [],
-        "state_defs_is_visible": false,
-        "state_defs_size": [
-            240,
-            100
-        ]
-    },
-    {
-        "obj_type": "Constructor_Args_Table",
-        "Constructor_Args": [],
-        "is_visible": false
-    },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {
-        "obj_type": "Constructor_Code_Box",
-        "code_box_contents": "// Initialize State Variables\nstate.received_beverage_selection = false;\nstate.received_money = false;\nstate.beverage_selected.price = 0;\nstate.beverage_selected.item_id = -1; \nstate.total_money_inserted = 0;\nstate.new_money = 0;\nstate.change_to_output = 0;",
-        "is_visible": false
-    },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {
-        "obj_type": "Internal_Transition",
-        "segments": [
-            {
-                "p1_x": 4511.75,
-                "p1_y": 4301.0,
-                "p2_x": 4065.0,
-                "p2_y": 4301.0,
-                "this_seg_id": 1761203357,
-                "line_seg_attatched_to_head_id": null,
-                "line_seg_attatched_to_tail_id": null
-            }
-        ],
-        "x_pos": 0.0,
-        "y_pos": 0.0,
-        "internal_transition_conditions": [],
-        "internal_transition_conditions_is_visible": false,
-        "internal_transition_conditions_size": [
-            625,
-            200
-        ],
-        "output_function_box": [
-            {
-                "outputs": {
-                    "Output Port": "o_change",
-                    "bag": "change_to_output"
-                }
-            }
-        ],
-        "output_function_box_is_visible": false,
-        "output_function_box_size": [
-            625,
-            200
-        ],
-        "transition_data_location_x": 4147.0,
-        "transition_data_location_y": 4148.0,
-        "state_bubble_attached_to_head_name": "____Dispense___Beverage",
-        "state_bubble_attached_to_tail_name": "Output_Change",
-        "state_bubble_attached_to_head_ta": "5",
-        "state_bubble_attached_to_tail_ta": "10",
-        "state_bubble_attached_to_head_id": 4031842674,
-        "state_bubble_attached_to_tail_id": 805306291,
-        "snap_attached_to_head_id": 0,
-        "snap_attached_to_tail_id": 4
-    },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
     {
         "obj_type": "State_Bubble",
         "state_name": "Check_Amount",
@@ -215,7 +11,14 @@
         "is_initial_state": false,
         "x_pos": 4520.030434782611,
         "y_pos": 3837.6695652173908,
-        "receive_conditionS": [],
+        "receive_conditionS": [
+            {
+                "receive_condition": {
+                    "input Port": "i_beverage_selection",
+                    "store": ""
+                }
+            }
+        ],
         "port_flagS": [],
         "receive_conditionS_is_visible": false,
         "receive_conditionS_size": [
@@ -253,6 +56,94 @@
     },
     {},
     {},
+    {
+        "obj_type": "Constructor_Code_Box",
+        "code_box_contents": "// Initialize State Variables\nstate.received_beverage_selection = false;\nstate.received_money = false;\nstate.beverage_selected.price = 0;\nstate.beverage_selected.item_id = -1; \nstate.total_money_inserted = 0;\nstate.new_money = 0;\nstate.change_to_output = 0;",
+        "is_visible": false
+    },
+    {
+        "obj_type": "Constructor_Args_Table",
+        "Constructor_Args": [],
+        "is_visible": false
+    },
+    {},
+    {
+        "obj_type": "Output_Port_Table",
+        "Output_Ports": [
+            {
+                "Name": "o_change",
+                "Type": "float"
+            },
+            {
+                "Name": "o_dispense_id",
+                "Type": "int"
+            },
+            {
+                "Name": "o_audio_message",
+                "Type": "std::string"
+            }
+        ],
+        "is_visible": false
+    },
+    {
+        "obj_type": "State_Variable_Table",
+        "State_Variables": [
+            {
+                "Name": "received_beverage_selection",
+                "Type": "bool"
+            },
+            {
+                "Name": "received_money",
+                "Type": "bool"
+            },
+            {
+                "Name": "beverage_selected",
+                "Type": "item_selection_t"
+            },
+            {
+                "Name": "total_money_inserted",
+                "Type": "float"
+            },
+            {
+                "Name": "new_money",
+                "Type": "float"
+            },
+            {
+                "Name": "change_to_output",
+                "Type": "float"
+            },
+            {
+                "Name": "id_to_output",
+                "Type": "int"
+            },
+            {
+                "Name": "audio_message",
+                "Type": "std::string"
+            }
+        ],
+        "is_visible": false
+    },
+    {},
+    {},
+    {
+        "obj_type": "Input_Port_Table",
+        "Input_Ports": [
+            {
+                "Name": "i_beverage_selection",
+                "Type": "item_selection_t"
+            },
+            {
+                "Name": "i_money",
+                "Type": "float"
+            }
+        ],
+        "is_visible": false
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
     {},
     {},
     {},
@@ -265,142 +156,15 @@
     {},
     {},
     {
-        "obj_type": "External_Transition",
-        "segments": [
-            {
-                "p1_x": 3666.0,
-                "p1_y": 3897.0,
-                "p2_x": 3933.1499999999996,
-                "p2_y": 3897.0,
-                "this_seg_id": 1609689649,
-                "line_seg_attatched_to_head_id": null,
-                "line_seg_attatched_to_tail_id": null
-            }
-        ],
-        "x_pos": 0.0,
-        "y_pos": 0.0,
-        "external_transition_conditions": [
-            {
-                "condition_row_pair": {
-                    "condtion": "state.received_beverage_selection",
-                    "row": 0
-                }
-            }
-        ],
-        "external_transition_conditions_is_visible": false,
-        "external_transition_conditions_size": [
-            540,
-            124
-        ],
-        "transition_data_location_x": 3700.0,
-        "transition_data_location_y": 3801.0,
-        "state_bubble_attached_to_head_name": "_____Collect____Currency",
-        "state_bubble_attached_to_tail_name": "____Wait_For___Selection",
-        "state_bubble_attached_to_head_ta": "60",
-        "state_bubble_attached_to_tail_ta": "inf",
-        "state_bubble_attached_to_head_id": 3869040247,
-        "state_bubble_attached_to_tail_id": 828155347,
-        "snap_attached_to_head_id": 4,
-        "snap_attached_to_tail_id": 0
+        "obj_type": "Editable_Model_Title",
+        "title": "VM_Purchase"
     },
-    {
-        "obj_type": "External_Transition",
-        "segments": [
-            {
-                "p1_x": 4044.1119407771253,
-                "p1_y": 3851.0380592228744,
-                "p2_x": 4534.068494005486,
-                "p2_y": 3851.707624440265,
-                "this_seg_id": 3779279237,
-                "line_seg_attatched_to_head_id": null,
-                "line_seg_attatched_to_tail_id": null
-            }
-        ],
-        "x_pos": 0.0,
-        "y_pos": 0.0,
-        "external_transition_conditions": [
-            {
-                "condition_row_pair": {
-                    "condtion": "state.received_money",
-                    "row": 0
-                }
-            }
-        ],
-        "external_transition_conditions_is_visible": false,
-        "external_transition_conditions_size": [
-            562,
-            100
-        ],
-        "transition_data_location_x": 4091.0,
-        "transition_data_location_y": 3775.0,
-        "state_bubble_attached_to_head_name": "Check_Amount",
-        "state_bubble_attached_to_tail_name": "_____Collect____Currency",
-        "state_bubble_attached_to_head_ta": "0",
-        "state_bubble_attached_to_tail_ta": "60",
-        "state_bubble_attached_to_head_id": 1670569017,
-        "state_bubble_attached_to_tail_id": 3869040247,
-        "snap_attached_to_head_id": 5,
-        "snap_attached_to_tail_id": 7
-    },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
     {},
     {
-        "obj_type": "Internal_Transition",
-        "segments": [
-            {
-                "p1_x": 4580.030434782611,
-                "p1_y": 3962.6695652173908,
-                "p2_x": 4576.75,
-                "p2_y": 4236.0,
-                "this_seg_id": 1949961872,
-                "line_seg_attatched_to_head_id": null,
-                "line_seg_attatched_to_tail_id": null
-            }
-        ],
-        "x_pos": 0.0,
-        "y_pos": 0.0,
-        "internal_transition_conditions": [
-            {
-                "condition_row_pair": {
-                    "condtion": "state.total_money_inserted >= state.beverage_selected.price",
-                    "row": 0
-                }
-            }
-        ],
-        "internal_transition_conditions_is_visible": false,
-        "internal_transition_conditions_size": [
-            625,
-            200
-        ],
-        "output_function_box": [],
-        "output_function_box_is_visible": false,
-        "output_function_box_size": [
-            625,
-            200
-        ],
-        "transition_data_location_x": 4576.0,
-        "transition_data_location_y": 3996.0,
-        "state_bubble_attached_to_head_name": "Output_Change",
-        "state_bubble_attached_to_tail_name": "Check_Amount",
-        "state_bubble_attached_to_head_ta": "10",
-        "state_bubble_attached_to_tail_ta": "0",
-        "state_bubble_attached_to_head_id": 805306291,
-        "state_bubble_attached_to_tail_id": 1670569017,
-        "snap_attached_to_head_id": 6,
-        "snap_attached_to_tail_id": 2
+        "obj_type": "Include_Dirs_Box",
+        "include_dirs_box": "// Include headers\n#include \"item_selection_t.hpp\"",
+        "is_visible": false
     },
-    {},
-    {},
-    {},
-    {},
     {},
     {},
     {},
@@ -448,354 +212,6 @@
             100
         ]
     },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {
-        "obj_type": "Internal_Transition",
-        "segments": [
-            {
-                "p1_x": 3998.1499999999996,
-                "p1_y": 3832.0,
-                "p2_x": 4002.0,
-                "p2_y": 3564.0,
-                "this_seg_id": 253713015,
-                "line_seg_attatched_to_head_id": null,
-                "line_seg_attatched_to_tail_id": null
-            }
-        ],
-        "x_pos": 0.0,
-        "y_pos": 0.0,
-        "internal_transition_conditions": [],
-        "internal_transition_conditions_is_visible": false,
-        "internal_transition_conditions_size": [
-            400,
-            123
-        ],
-        "output_function_box": [],
-        "output_function_box_is_visible": false,
-        "output_function_box_size": [
-            400,
-            100
-        ],
-        "transition_data_location_x": 4004.0,
-        "transition_data_location_y": 3602.0,
-        "state_bubble_attached_to_head_name": "Blocking_State",
-        "state_bubble_attached_to_tail_name": "_____Collect____Currency",
-        "state_bubble_attached_to_head_ta": "inf",
-        "state_bubble_attached_to_tail_ta": "60",
-        "state_bubble_attached_to_head_id": 134386702,
-        "state_bubble_attached_to_tail_id": 3869040247,
-        "snap_attached_to_head_id": 2,
-        "snap_attached_to_tail_id": 6
-    },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {
-        "obj_type": "Internal_Transition",
-        "segments": [
-            {
-                "p1_x": 4534.068494005486,
-                "p1_y": 3943.6315059945164,
-                "p2_x": 4044.1119407771253,
-                "p2_y": 3942.9619407771256,
-                "this_seg_id": 2393530529,
-                "line_seg_attatched_to_head_id": null,
-                "line_seg_attatched_to_tail_id": null
-            }
-        ],
-        "x_pos": 0.0,
-        "y_pos": 0.0,
-        "internal_transition_conditions": [
-            {
-                "condition_row_pair": {
-                    "condtion": "state.total_money_inserted < state.beverage_selected.price",
-                    "row": 0
-                }
-            }
-        ],
-        "internal_transition_conditions_is_visible": false,
-        "internal_transition_conditions_size": [
-            560,
-            100
-        ],
-        "output_function_box": [],
-        "output_function_box_is_visible": false,
-        "output_function_box_size": [
-            625,
-            200
-        ],
-        "transition_data_location_x": 4091.0,
-        "transition_data_location_y": 3867.0,
-        "state_bubble_attached_to_head_name": "_____Collect____Currency",
-        "state_bubble_attached_to_tail_name": "Check_Amount",
-        "state_bubble_attached_to_head_ta": "60",
-        "state_bubble_attached_to_tail_ta": "0",
-        "state_bubble_attached_to_head_id": 3869040247,
-        "state_bubble_attached_to_tail_id": 1670569017,
-        "snap_attached_to_head_id": 1,
-        "snap_attached_to_tail_id": 3
-    },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {
-        "obj_type": "Internal_Transition",
-        "segments": [
-            {
-                "p1_x": 3600.0,
-                "p1_y": 4201.0,
-                "p2_x": 3601.0,
-                "p2_y": 3962.0,
-                "this_seg_id": 1693328134,
-                "line_seg_attatched_to_head_id": null,
-                "line_seg_attatched_to_tail_id": 2212166570
-            },
-            {
-                "p1_x": 3935.0,
-                "p1_y": 4301.0,
-                "p2_x": 3600.0,
-                "p2_y": 4201.0,
-                "this_seg_id": 2212166570,
-                "line_seg_attatched_to_head_id": 1693328134,
-                "line_seg_attatched_to_tail_id": null
-            }
-        ],
-        "x_pos": 0.0,
-        "y_pos": 0.0,
-        "internal_transition_conditions": [],
-        "internal_transition_conditions_is_visible": false,
-        "internal_transition_conditions_size": [
-            625,
-            200
-        ],
-        "output_function_box": [
-            {
-                "outputs": {
-                    "Output Port": "o_dispense_id",
-                    "bag": "id_to_output"
-                }
-            },
-            {
-                "outputs": {
-                    "Output Port": "o_audio_message",
-                    "bag": "audio_message"
-                }
-            }
-        ],
-        "output_function_box_is_visible": false,
-        "output_function_box_size": [
-            625,
-            200
-        ],
-        "transition_data_location_x": 3600.0,
-        "transition_data_location_y": 3949.0,
-        "state_bubble_attached_to_head_name": "____Wait_For___Selection",
-        "state_bubble_attached_to_tail_name": "____Dispense___Beverage",
-        "state_bubble_attached_to_head_ta": "inf",
-        "state_bubble_attached_to_tail_ta": "5",
-        "state_bubble_attached_to_head_id": 828155347,
-        "state_bubble_attached_to_tail_id": 4031842674,
-        "snap_attached_to_head_id": 2,
-        "snap_attached_to_tail_id": 4
-    },
-    {
-        "obj_type": "State_Bubble",
-        "state_name": "Blocking_State",
-        "id": 134386702,
-        "ta": "inf",
-        "is_initial_state": false,
-        "x_pos": 3942.0,
-        "y_pos": 3439.0,
-        "receive_conditionS": [],
-        "port_flagS": [],
-        "receive_conditionS_is_visible": false,
-        "receive_conditionS_size": [
-            625,
-            200
-        ],
-        "external_transition_code_box": "",
-        "external_transition_code_box_is_visible": false,
-        "external_transition_code_box_size": [
-            550,
-            150
-        ],
-        "internal_transition_code_box": "",
-        "internal_transition_code_box_is_visible": false,
-        "internal_transition_code_box_size": [
-            550,
-            150
-        ],
-        "output_function_code_box": "",
-        "output_function_code_box_is_visible": false,
-        "output_function_code_box_size": [
-            550,
-            150
-        ],
-        "notification_color": "#26f800",
-        "notification_priority": 1,
-        "state_defs": [],
-        "state_defs_is_visible": false,
-        "state_defs_size": [
-            240,
-            100
-        ]
-    },
-    {},
-    {
-        "obj_type": "Editable_Model_Title",
-        "title": "VM_Purchase"
-    },
-    {
-        "obj_type": "Input_Port_Table",
-        "Input_Ports": [
-            {
-                "Name": "i_beverage_selection",
-                "Type": "item_selection_t"
-            },
-            {
-                "Name": "i_money",
-                "Type": "float"
-            }
-        ],
-        "is_visible": false
-    },
-    {},
-    {
-        "obj_type": "Output_Port_Table",
-        "Output_Ports": [
-            {
-                "Name": "o_change",
-                "Type": "float"
-            },
-            {
-                "Name": "o_dispense_id",
-                "Type": "int"
-            },
-            {
-                "Name": "o_audio_message",
-                "Type": "std::string"
-            }
-        ],
-        "is_visible": false
-    },
-    {},
-    {
-        "obj_type": "Include_Dirs_Box",
-        "include_dirs_box": "// Include headers\n#include \"item_selection_t.hpp\"",
-        "is_visible": false
-    },
-    {},
-    {
-        "obj_type": "State_Variable_Table",
-        "State_Variables": [
-            {
-                "Name": "received_beverage_selection",
-                "Type": "bool"
-            },
-            {
-                "Name": "received_money",
-                "Type": "bool"
-            },
-            {
-                "Name": "beverage_selected",
-                "Type": "item_selection_t"
-            },
-            {
-                "Name": "total_money_inserted",
-                "Type": "float"
-            },
-            {
-                "Name": "new_money",
-                "Type": "float"
-            },
-            {
-                "Name": "change_to_output",
-                "Type": "float"
-            },
-            {
-                "Name": "id_to_output",
-                "Type": "int"
-            },
-            {
-                "Name": "audio_message",
-                "Type": "std::string"
-            }
-        ],
-        "is_visible": false
-    },
-    {},
-    {},
     {},
     {},
     {},
@@ -874,5 +290,597 @@
             107
         ]
     },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+        "obj_type": "State_Bubble",
+        "state_name": "Blocking_State",
+        "id": 134386702,
+        "ta": "inf",
+        "is_initial_state": false,
+        "x_pos": 3942.0,
+        "y_pos": 3439.0,
+        "receive_conditionS": [],
+        "port_flagS": [],
+        "receive_conditionS_is_visible": false,
+        "receive_conditionS_size": [
+            625,
+            200
+        ],
+        "external_transition_code_box": "",
+        "external_transition_code_box_is_visible": false,
+        "external_transition_code_box_size": [
+            550,
+            150
+        ],
+        "internal_transition_code_box": "",
+        "internal_transition_code_box_is_visible": false,
+        "internal_transition_code_box_size": [
+            550,
+            150
+        ],
+        "output_function_code_box": "",
+        "output_function_code_box_is_visible": false,
+        "output_function_code_box_size": [
+            550,
+            150
+        ],
+        "notification_color": "#ff0000",
+        "notification_priority": 1,
+        "state_defs": [],
+        "state_defs_is_visible": false,
+        "state_defs_size": [
+            240,
+            100
+        ]
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+        "obj_type": "State_Bubble",
+        "state_name": "____Dispense___Beverage",
+        "id": 4031842674,
+        "ta": "5",
+        "is_initial_state": false,
+        "x_pos": 3940.0,
+        "y_pos": 4241.0,
+        "receive_conditionS": [],
+        "port_flagS": [],
+        "receive_conditionS_is_visible": false,
+        "receive_conditionS_size": [
+            625,
+            200
+        ],
+        "external_transition_code_box": "",
+        "external_transition_code_box_is_visible": false,
+        "external_transition_code_box_size": [
+            550,
+            150
+        ],
+        "internal_transition_code_box": "//Reset state variables\nstate.change_to_output = 0;\nstate.total_money_inserted = 0;\nstate.received_beverage_selection = false;",
+        "internal_transition_code_box_is_visible": false,
+        "internal_transition_code_box_size": [
+            550,
+            150
+        ],
+        "output_function_code_box": "//Set the ID to output\nstate.id_to_output = state.beverage_selected.item_id;\nstate.audio_message = \"thanks for your money\";",
+        "output_function_code_box_is_visible": true,
+        "output_function_code_box_size": [
+            646,
+            100
+        ],
+        "notification_color": "#26f800",
+        "notification_priority": 1,
+        "state_defs": [],
+        "state_defs_is_visible": false,
+        "state_defs_size": [
+            240,
+            100
+        ]
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+        "obj_type": "State_Bubble",
+        "state_name": "____Wait_For___Selection",
+        "id": 828155347,
+        "ta": "inf",
+        "is_initial_state": true,
+        "x_pos": 3541.0,
+        "y_pos": 3837.0,
+        "receive_conditionS": [
+            {
+                "receive_condition": {
+                    "input Port": "i_beverage_selection",
+                    "store": "beverage_selected"
+                }
+            }
+        ],
+        "port_flagS": [
+            {
+                "receive_condition": {
+                    "input Port": "___r_i_beverage_selection",
+                    "store": "received_beverage_selection"
+                }
+            }
+        ],
+        "receive_conditionS_is_visible": false,
+        "receive_conditionS_size": [
+            612,
+            200
+        ],
+        "external_transition_code_box": "",
+        "external_transition_code_box_is_visible": false,
+        "external_transition_code_box_size": [
+            550,
+            150
+        ],
+        "internal_transition_code_box": "",
+        "internal_transition_code_box_is_visible": false,
+        "internal_transition_code_box_size": [
+            550,
+            150
+        ],
+        "output_function_code_box": "",
+        "output_function_code_box_is_visible": false,
+        "output_function_code_box_size": [
+            550,
+            150
+        ],
+        "notification_color": "#26f800",
+        "notification_priority": 1,
+        "state_defs": [],
+        "state_defs_is_visible": false,
+        "state_defs_size": [
+            240,
+            100
+        ]
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+        "obj_type": "Internal_Transition",
+        "segments": [
+            {
+                "p1_x": 4534.068494005486,
+                "p1_y": 3943.6315059945164,
+                "p2_x": 4044.1119407771253,
+                "p2_y": 3942.9619407771256,
+                "this_seg_id": 2393530529,
+                "line_seg_attatched_to_head_id": null,
+                "line_seg_attatched_to_tail_id": null
+            }
+        ],
+        "x_pos": 0.0,
+        "y_pos": 0.0,
+        "internal_transition_conditions": [
+            {
+                "condition_row_pair": {
+                    "condtion": "state.total_money_inserted < state.beverage_selected.price",
+                    "row": 0
+                }
+            }
+        ],
+        "internal_transition_conditions_is_visible": false,
+        "internal_transition_conditions_size": [
+            560,
+            100
+        ],
+        "output_function_box": [],
+        "output_function_box_is_visible": false,
+        "output_function_box_size": [
+            625,
+            200
+        ],
+        "transition_data_location_x": 4091.0,
+        "transition_data_location_y": 3867.0,
+        "state_bubble_attached_to_head_name": "_____Collect____Currency",
+        "state_bubble_attached_to_tail_name": "Check_Amount",
+        "state_bubble_attached_to_head_ta": "60",
+        "state_bubble_attached_to_tail_ta": "0",
+        "state_bubble_attached_to_head_id": 3869040247,
+        "state_bubble_attached_to_tail_id": 1670569017,
+        "snap_attached_to_head_id": 1,
+        "snap_attached_to_tail_id": 3
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+        "obj_type": "External_Transition",
+        "segments": [
+            {
+                "p1_x": 3666.0,
+                "p1_y": 3897.0,
+                "p2_x": 3933.1499999999996,
+                "p2_y": 3897.0,
+                "this_seg_id": 1609689649,
+                "line_seg_attatched_to_head_id": null,
+                "line_seg_attatched_to_tail_id": null
+            }
+        ],
+        "x_pos": 0.0,
+        "y_pos": 0.0,
+        "external_transition_conditions": [
+            {
+                "condition_row_pair": {
+                    "condtion": "state.received_beverage_selection",
+                    "row": 0
+                }
+            }
+        ],
+        "external_transition_conditions_is_visible": false,
+        "external_transition_conditions_size": [
+            540,
+            124
+        ],
+        "transition_data_location_x": 3700.0,
+        "transition_data_location_y": 3801.0,
+        "state_bubble_attached_to_head_name": "_____Collect____Currency",
+        "state_bubble_attached_to_tail_name": "____Wait_For___Selection",
+        "state_bubble_attached_to_head_ta": "60",
+        "state_bubble_attached_to_tail_ta": "inf",
+        "state_bubble_attached_to_head_id": 3869040247,
+        "state_bubble_attached_to_tail_id": 828155347,
+        "snap_attached_to_head_id": 4,
+        "snap_attached_to_tail_id": 0
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+        "obj_type": "Internal_Transition",
+        "segments": [
+            {
+                "p1_x": 3998.1499999999996,
+                "p1_y": 3832.0,
+                "p2_x": 4002.0,
+                "p2_y": 3564.0,
+                "this_seg_id": 253713015,
+                "line_seg_attatched_to_head_id": null,
+                "line_seg_attatched_to_tail_id": null
+            }
+        ],
+        "x_pos": 0.0,
+        "y_pos": 0.0,
+        "internal_transition_conditions": [],
+        "internal_transition_conditions_is_visible": false,
+        "internal_transition_conditions_size": [
+            400,
+            123
+        ],
+        "output_function_box": [],
+        "output_function_box_is_visible": false,
+        "output_function_box_size": [
+            400,
+            100
+        ],
+        "transition_data_location_x": 4004.0,
+        "transition_data_location_y": 3602.0,
+        "state_bubble_attached_to_head_name": "Blocking_State",
+        "state_bubble_attached_to_tail_name": "_____Collect____Currency",
+        "state_bubble_attached_to_head_ta": "inf",
+        "state_bubble_attached_to_tail_ta": "60",
+        "state_bubble_attached_to_head_id": 134386702,
+        "state_bubble_attached_to_tail_id": 3869040247,
+        "snap_attached_to_head_id": 2,
+        "snap_attached_to_tail_id": 6
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+        "obj_type": "Internal_Transition",
+        "segments": [
+            {
+                "p1_x": 4511.75,
+                "p1_y": 4301.0,
+                "p2_x": 4065.0,
+                "p2_y": 4301.0,
+                "this_seg_id": 1761203357,
+                "line_seg_attatched_to_head_id": null,
+                "line_seg_attatched_to_tail_id": null
+            }
+        ],
+        "x_pos": 0.0,
+        "y_pos": 0.0,
+        "internal_transition_conditions": [],
+        "internal_transition_conditions_is_visible": false,
+        "internal_transition_conditions_size": [
+            625,
+            200
+        ],
+        "output_function_box": [
+            {
+                "outputs": {
+                    "Output Port": "o_change",
+                    "bag": "change_to_output"
+                }
+            }
+        ],
+        "output_function_box_is_visible": false,
+        "output_function_box_size": [
+            625,
+            200
+        ],
+        "transition_data_location_x": 4147.0,
+        "transition_data_location_y": 4148.0,
+        "state_bubble_attached_to_head_name": "____Dispense___Beverage",
+        "state_bubble_attached_to_tail_name": "Output_Change",
+        "state_bubble_attached_to_head_ta": "5",
+        "state_bubble_attached_to_tail_ta": "10",
+        "state_bubble_attached_to_head_id": 4031842674,
+        "state_bubble_attached_to_tail_id": 805306291,
+        "snap_attached_to_head_id": 0,
+        "snap_attached_to_tail_id": 4
+    },
+    {},
+    {},
+    {},
+    {},
+    {
+        "obj_type": "Internal_Transition",
+        "segments": [
+            {
+                "p1_x": 3600.0,
+                "p1_y": 4201.0,
+                "p2_x": 3601.0,
+                "p2_y": 3962.0,
+                "this_seg_id": 1693328134,
+                "line_seg_attatched_to_head_id": null,
+                "line_seg_attatched_to_tail_id": 2212166570
+            },
+            {
+                "p1_x": 3935.0,
+                "p1_y": 4301.0,
+                "p2_x": 3600.0,
+                "p2_y": 4201.0,
+                "this_seg_id": 2212166570,
+                "line_seg_attatched_to_head_id": 1693328134,
+                "line_seg_attatched_to_tail_id": null
+            }
+        ],
+        "x_pos": 0.0,
+        "y_pos": 0.0,
+        "internal_transition_conditions": [],
+        "internal_transition_conditions_is_visible": false,
+        "internal_transition_conditions_size": [
+            625,
+            200
+        ],
+        "output_function_box": [
+            {
+                "outputs": {
+                    "Output Port": "o_dispense_id",
+                    "bag": "id_to_output"
+                }
+            },
+            {
+                "outputs": {
+                    "Output Port": "o_audio_message",
+                    "bag": "audio_message"
+                }
+            }
+        ],
+        "output_function_box_is_visible": false,
+        "output_function_box_size": [
+            625,
+            200
+        ],
+        "transition_data_location_x": 3600.0,
+        "transition_data_location_y": 3949.0,
+        "state_bubble_attached_to_head_name": "____Wait_For___Selection",
+        "state_bubble_attached_to_tail_name": "____Dispense___Beverage",
+        "state_bubble_attached_to_head_ta": "inf",
+        "state_bubble_attached_to_tail_ta": "5",
+        "state_bubble_attached_to_head_id": 828155347,
+        "state_bubble_attached_to_tail_id": 4031842674,
+        "snap_attached_to_head_id": 2,
+        "snap_attached_to_tail_id": 4
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+        "obj_type": "External_Transition",
+        "segments": [
+            {
+                "p1_x": 4044.1119407771253,
+                "p1_y": 3851.0380592228744,
+                "p2_x": 4534.068494005486,
+                "p2_y": 3851.707624440265,
+                "this_seg_id": 3779279237,
+                "line_seg_attatched_to_head_id": null,
+                "line_seg_attatched_to_tail_id": null
+            }
+        ],
+        "x_pos": 0.0,
+        "y_pos": 0.0,
+        "external_transition_conditions": [
+            {
+                "condition_row_pair": {
+                    "condtion": "state.received_money",
+                    "row": 0
+                }
+            }
+        ],
+        "external_transition_conditions_is_visible": false,
+        "external_transition_conditions_size": [
+            562,
+            100
+        ],
+        "transition_data_location_x": 4091.0,
+        "transition_data_location_y": 3775.0,
+        "state_bubble_attached_to_head_name": "Check_Amount",
+        "state_bubble_attached_to_tail_name": "_____Collect____Currency",
+        "state_bubble_attached_to_head_ta": "0",
+        "state_bubble_attached_to_tail_ta": "60",
+        "state_bubble_attached_to_head_id": 1670569017,
+        "state_bubble_attached_to_tail_id": 3869040247,
+        "snap_attached_to_head_id": 5,
+        "snap_attached_to_tail_id": 7
+    },
+    {},
+    {},
+    {},
+    {},
+    {
+        "obj_type": "Internal_Transition",
+        "segments": [
+            {
+                "p1_x": 4580.030434782611,
+                "p1_y": 3962.6695652173908,
+                "p2_x": 4576.75,
+                "p2_y": 4236.0,
+                "this_seg_id": 1949961872,
+                "line_seg_attatched_to_head_id": null,
+                "line_seg_attatched_to_tail_id": null
+            }
+        ],
+        "x_pos": 0.0,
+        "y_pos": 0.0,
+        "internal_transition_conditions": [
+            {
+                "condition_row_pair": {
+                    "condtion": "state.total_money_inserted >= state.beverage_selected.price",
+                    "row": 0
+                }
+            }
+        ],
+        "internal_transition_conditions_is_visible": false,
+        "internal_transition_conditions_size": [
+            625,
+            200
+        ],
+        "output_function_box": [],
+        "output_function_box_is_visible": false,
+        "output_function_box_size": [
+            625,
+            200
+        ],
+        "transition_data_location_x": 4576.0,
+        "transition_data_location_y": 3996.0,
+        "state_bubble_attached_to_head_name": "Output_Change",
+        "state_bubble_attached_to_tail_name": "Check_Amount",
+        "state_bubble_attached_to_head_ta": "10",
+        "state_bubble_attached_to_tail_ta": "0",
+        "state_bubble_attached_to_head_id": 805306291,
+        "state_bubble_attached_to_tail_id": 1670569017,
+        "snap_attached_to_head_id": 6,
+        "snap_attached_to_tail_id": 2
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
     {}
 ]

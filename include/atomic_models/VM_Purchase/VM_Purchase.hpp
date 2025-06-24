@@ -15,12 +15,12 @@ using namespace cadmium;
              
 //enum for representing the states
 enum class VM_Purchase_States {    
-   ____Wait_For___Selection, 
-   ____Dispense___Beverage, 
    Check_Amount, 
    Output_Change, 
+   _____Collect____Currency, 
    Blocking_State, 
-   _____Collect____Currency 
+   ____Dispense___Beverage, 
+   ____Wait_For___Selection 
 
 }; //end of the enum
 
@@ -28,23 +28,23 @@ enum class VM_Purchase_States {
 // Function to convert the enum for states to an enum to the corresponding string
 std::string enumToString(VM_Purchase_States state) {
     switch (state) {
-        case VM_Purchase_States::____Wait_For___Selection:
-            return "____Wait_For___Selection" ;
-
-        case VM_Purchase_States::____Dispense___Beverage:
-            return "____Dispense___Beverage" ;
-
         case VM_Purchase_States::Check_Amount:
             return "Check_Amount" ;
 
         case VM_Purchase_States::Output_Change:
             return "Output_Change" ;
 
+        case VM_Purchase_States::_____Collect____Currency:
+            return "_____Collect____Currency" ;
+
         case VM_Purchase_States::Blocking_State:
             return "Blocking_State" ;
 
-        case VM_Purchase_States::_____Collect____Currency:
-            return "_____Collect____Currency" ;
+        case VM_Purchase_States::____Dispense___Beverage:
+            return "____Dispense___Beverage" ;
+
+        case VM_Purchase_States::____Wait_For___Selection:
+            return "____Wait_For___Selection" ;
 
         default:
             return "invalid";
@@ -139,35 +139,23 @@ class VM_Purchase: public Atomic<VM_Purchase_State> {
             state.clock += state.sigma;
             //state.sigma = ++state.nInternals;
             switch (state.___current_state___) { 
-                case VM_Purchase_States::Output_Change:{
-
-
-                    if(true)
-                    {
-                        state.___current_state___ = VM_Purchase_States::____Dispense___Beverage;
-                        state.sigma = 5;  // For logging
-                        return; // We switched states, return
-                    }
-                
-                return;
-                }
                 case VM_Purchase_States::Check_Amount:{
                     //Add the new money to the total
                     state.total_money_inserted += state.new_money;
                     //reset the state variable
                     state.received_money = false;
 
-                    if((state.total_money_inserted >= state.beverage_selected.price))
-                    {
-                        state.___current_state___ = VM_Purchase_States::Output_Change;
-                        state.sigma = 10;  // For logging
-                        return; // We switched states, return
-                    }
-                
                     if((state.total_money_inserted < state.beverage_selected.price))
                     {
                         state.___current_state___ = VM_Purchase_States::_____Collect____Currency;
                         state.sigma = 60;  // For logging
+                        return; // We switched states, return
+                    }
+                
+                    if((state.total_money_inserted >= state.beverage_selected.price))
+                    {
+                        state.___current_state___ = VM_Purchase_States::Output_Change;
+                        state.sigma = 10;  // For logging
                         return; // We switched states, return
                     }
                 
@@ -180,6 +168,18 @@ class VM_Purchase: public Atomic<VM_Purchase_State> {
                     {
                         state.___current_state___ = VM_Purchase_States::Blocking_State;
                         state.sigma = std::numeric_limits<double>::infinity();  // For logging
+                        return; // We switched states, return
+                    }
+                
+                return;
+                }
+                case VM_Purchase_States::Output_Change:{
+
+
+                    if(true)
+                    {
+                        state.___current_state___ = VM_Purchase_States::____Dispense___Beverage;
+                        state.sigma = 5;  // For logging
                         return; // We switched states, return
                     }
                 
@@ -274,25 +274,14 @@ class VM_Purchase: public Atomic<VM_Purchase_State> {
              
         void output(const VM_Purchase_State& state) const override {
             switch (state.___current_state___) { 
-                case VM_Purchase_States::Output_Change:{
-
-                    if(true)
-                    {
-                        o_change->addMessage(state.change_to_output);
-
-                    }
-                
-                return;
-                }     
-                
                 case VM_Purchase_States::Check_Amount:{
 
-                    if((state.total_money_inserted >= state.beverage_selected.price))
+                    if((state.total_money_inserted < state.beverage_selected.price))
                     {
 
                     }
                 
-                    if((state.total_money_inserted < state.beverage_selected.price))
+                    if((state.total_money_inserted >= state.beverage_selected.price))
                     {
 
                     }
@@ -304,6 +293,17 @@ class VM_Purchase: public Atomic<VM_Purchase_State> {
 
                     if(true)
                     {
+
+                    }
+                
+                return;
+                }     
+                
+                case VM_Purchase_States::Output_Change:{
+
+                    if(true)
+                    {
+                        o_change->addMessage(state.change_to_output);
 
                     }
                 
@@ -334,14 +334,6 @@ class VM_Purchase: public Atomic<VM_Purchase_State> {
         [[nodiscard]] double timeAdvance(const VM_Purchase_State& state) const override {
                 switch (state.___current_state___) { 
 
-            case VM_Purchase_States::____Wait_For___Selection:
-                // state.sigma = std::numeric_limits<double>::infinity();
-                return std::numeric_limits<double>::infinity();
-
-            case VM_Purchase_States::____Dispense___Beverage:
-                // state.sigma = 5;
-                return 5;
-
             case VM_Purchase_States::Check_Amount:
                 // state.sigma = 0;
                 return 0;
@@ -350,13 +342,21 @@ class VM_Purchase: public Atomic<VM_Purchase_State> {
                 // state.sigma = 10;
                 return 10;
 
+            case VM_Purchase_States::_____Collect____Currency:
+                // state.sigma = 60;
+                return 60;
+
             case VM_Purchase_States::Blocking_State:
                 // state.sigma = std::numeric_limits<double>::infinity();
                 return std::numeric_limits<double>::infinity();
 
-            case VM_Purchase_States::_____Collect____Currency:
-                // state.sigma = 60;
-                return 60;
+            case VM_Purchase_States::____Dispense___Beverage:
+                // state.sigma = 5;
+                return 5;
+
+            case VM_Purchase_States::____Wait_For___Selection:
+                // state.sigma = std::numeric_limits<double>::infinity();
+                return std::numeric_limits<double>::infinity();
 
             default:
                 break;
